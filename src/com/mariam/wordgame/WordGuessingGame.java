@@ -1,4 +1,6 @@
 package com.mariam.wordgame;
+import java.util.Random;
+import java.util.Scanner;
 
 public class WordGuessingGame {
     private String wordToGuess;
@@ -15,6 +17,7 @@ public class WordGuessingGame {
     }
 
     public  void play(){
+        System.out.println("The word to guess is "+wordToGuess);
         Scanner scanner = new Scanner(System.in);
 
         while (attempts > 0){
