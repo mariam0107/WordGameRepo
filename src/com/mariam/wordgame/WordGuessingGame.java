@@ -15,23 +15,29 @@ public class WordGuessingGame {
       }
       this.attempts = maxAttempts;
     }
-
     public  void play(){
-        System.out.println("The word to guess is "+wordToGuess);
         Scanner scanner = new Scanner(System.in);
+        boolean userHasWon = false;
 
-        while (attempts > 0){
+        while (attempts > 0 && !userHasWon){
             System.out.println("You have"+ attempts +"attempts left...");
             System.out.println("Guess a letter : ");
             char guess = scanner.nextLine().toLowerCase().charAt(0);
 
             if(processGuess(guess)) {
                 System.out.println("Correct !");
-            } else{
+                if(new String(guessedLetters).equals(wordToGuess)){
+                        System.out.println("Word Guess right ! You won !!");
+                        userHasWon = true;
+                    }
+                }
+            else{
                 System.out.println("That guess was incorrect");
                 attempts--;
             }
-
+        }
+        if(!userHasWon){
+            System.out.println("You are out of guesses !You lose !");
         }
     }
     private boolean  processGuess(char letter){
