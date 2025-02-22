@@ -20,6 +20,7 @@ public class WordGuessingGame {
         boolean userHasWon = false;
 
         while (attempts > 0 && !userHasWon){
+            displayState();
             System.out.println("You have"+ attempts +"attempts left...");
             System.out.println("Guess a letter : ");
             char guess = scanner.nextLine().toLowerCase().charAt(0);
@@ -49,5 +50,8 @@ public class WordGuessingGame {
             }
         }
         return letterFound;
+    }
+    private void displayState(){
+        System.out.println("Guessed letters: "+ new String(guessedLetters));
     }
 }
