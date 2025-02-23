@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class WordGuessingGame {
     private String wordToGuess;
     private char[] guessedLetters;
-    private int attempts;
+    private int attempts ;
     public WordGuessingGame(String[] wordList,int maxAttempts){
       Random rand = new Random();
       this.wordToGuess = wordList[rand.nextInt(wordList.length)];
@@ -15,11 +15,10 @@ public class WordGuessingGame {
       }
       this.attempts = maxAttempts;
     }
-    public  void play(){
+    public  String play(){
         Scanner scanner = new Scanner(System.in);
-        boolean userHasWon = false;
 
-        while (attempts > 0 && !userHasWon){
+        while (attempts > 0 ){
             displayState();
             System.out.println("You have"+ attempts +"attempts left...");
             System.out.println("Guess a letter : ");
@@ -29,17 +28,15 @@ public class WordGuessingGame {
                 System.out.println("Correct !");
                 if(new String(guessedLetters).equals(wordToGuess)){
                         System.out.println("Word Guess right ! You won !!");
-                        userHasWon = true;
-                    }
+                        return "Win";
+                                            }
                 }
             else{
                 System.out.println("That guess was incorrect");
                 attempts--;
             }
         }
-        if(!userHasWon){
-            System.out.println("You are out of guesses !You lose !");
-        }
+        return "Lost";
     }
     private boolean  processGuess(char letter){
         boolean letterFound = false;

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df7ee73f-85d2-4281-8172-8370c9ace5e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mariam/wordgame/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mariam/wordgame/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mariam/wordgame/WordGuessingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mariam/wordgame/WordGuessingGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
